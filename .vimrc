@@ -12,17 +12,22 @@ set sw=2
 set relativenumber
 syntax enable
 
+au BufNewFile,BufRead *.yaml,*.yml
+
+""Color
+colorscheme gruvbox
+
 "" Plugins
 so ~/.vim/plugins.vim
-so ~/.vim/plugins/config.vim
+so ~/.vim/plugins/basic.vim
+so ~/.vim/plugins/nerdtree.vim
+so ~/.vim/plugins/yaml.vim
+so ~/.vim/plugins/git.vim
 so ~/.vim/maps.vim
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugins/yaml.vim
-
-"""Color
-colorscheme gruvbox
 
 let g:gruvbox_contrast_dark = "hard"
 let g:deoplete#enable_at_startup = 1
+
 let g:airline_theme="dark"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
